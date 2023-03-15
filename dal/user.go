@@ -2,6 +2,7 @@ package dal
 
 import (
 	"context"
+
 	"github.com/qiong-14/EasyDouYin/constants"
 	"gorm.io/gorm"
 )
@@ -9,9 +10,12 @@ import (
 // User Table Struct
 type User struct {
 	gorm.Model
-	Id       int64  `gorm:"primary_key"`
-	Name     string `json:"name"`
-	Password string `json:"password"`
+	Id              int64  `gorm:"primary_key"`
+	Name            string `json:"name"`
+	Password        string `json:"password"`
+	Avatar          string `json:"avatar"`
+	BackgroundImage string `json:"background_image"`
+	Signature       string `json:"signature"`
 }
 
 var InvalidUser = User{

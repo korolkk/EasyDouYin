@@ -7,3 +7,4 @@ dy_secure_config*
 *.mp4
 *.jpg
 !bear.mp4
+!run.log

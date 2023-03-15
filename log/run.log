@@ -1,0 +1,849 @@
+
+Run message sever failed: listen tcp 127.0.0.1:9090: bind: address already in use
+2023/03/14 19:22:47 &minio.Client{endpointURL:(*url.URL)(0xc00037aab0), credsProvider:(*credentials.Credentials)(0xc0001e2540), overrideSignerType:0, appInfo:struct { appName string; appVersion string }{appName:"", appVersion:""}, secure:false, httpClient:(*http.Client)(0xc0002edd70), bucketLocCache:(*minio.bucketLocationCache)(0xc0000816a0), isTraceEnabled:false, traceErrorsOnly:false, traceOutput:io.Writer(nil), s3AccelerateEndpoint:"", region:"", random:(*rand.Rand)(0xc0002ede00), lookup:0, md5Hasher:(func() md5simd.Hasher)(0xc633c0), sha256Hasher:(func() md5simd.Hasher)(0xc63460), healthStatus:-1, trailingHeaderSupport:false}
+2023/03/14 19:22:48 1, We already own videos-and-covers
+2023/03/14 19:22:48.505483 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/static/*filepath         --> handlerName=github.com/cloudwego/hertz/pkg/app.(*fsHandler).handleRequest-fm (num=2 handlers)
+2023/03/14 19:22:48.505537 engine.go:617: [Debug] HERTZ: Method=HEAD   absolutePath=/static/*filepath         --> handlerName=github.com/cloudwego/hertz/pkg/app.(*fsHandler).handleRequest-fm (num=2 handlers)
+2023/03/14 19:22:48.505548 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/feed/             --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Feed (num=2 handlers)
+2023/03/14 19:22:48.505556 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/register/    --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Register (num=2 handlers)
+2023/03/14 19:22:48.505563 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/login/       --> handlerName=github.com/hertz-contrib/jwt.(*HertzJWTMiddleware).LoginHandler-fm (num=2 handlers)
+2023/03/14 19:22:48.505571 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/ping              --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Ping (num=3 handlers)
+2023/03/14 19:22:48.505577 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/publish/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Publish (num=3 handlers)
+2023/03/14 19:22:48.505585 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/publish/list/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.PublishList (num=3 handlers)
+2023/03/14 19:22:48.505594 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/user/             --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.UserInfo (num=3 handlers)
+2023/03/14 19:22:48.505607 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/favorite/action/  --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FavoriteAction (num=3 handlers)
+2023/03/14 19:22:48.505617 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/favorite/list/    --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FavoriteList (num=3 handlers)
+2023/03/14 19:22:48.505624 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/comment/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.CommentAction (num=3 handlers)
+2023/03/14 19:22:48.505630 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/comment/list/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.CommentList (num=3 handlers)
+2023/03/14 19:22:48.505636 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/relation/action/  --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.RelationAction (num=3 handlers)
+2023/03/14 19:22:48.505643 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follow/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FollowList (num=3 handlers)
+2023/03/14 19:22:48.505649 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follower/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FollowerList (num=3 handlers)
+2023/03/14 19:22:48.505657 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/friend/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FriendList (num=3 handlers)
+2023/03/14 19:22:48.505670 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/message/chat/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.MessageChat (num=3 handlers)
+2023/03/14 19:22:48.505675 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/message/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.MessageAction (num=3 handlers)
+2023/03/14 19:22:48.505755 engine.go:389: [Info] HERTZ: Using network library=netpoll
+panic: create netpoll listener fail: list2023/03/14 19:23:31.846756 hertz.go:70: [Error] HERTZ: Receive close signal: error=terminated
+o/hertz/pkg/network/netpoll.(*transporter).ListenAndServe(0xc00054e240, 0xc000482bc0)
+	/home/gopath/pkg/mod/github.com/cloudwego/hertz@v0.5.2/pkg/network/netpoll/transport.go:74 +0x57f
+github.com/cloudwego/hertz/pkg/route.(*Engine).listenAndServe(0xc000574000)
+	/home/gopath/pkg/mod/github.com/cloudwego/hertz@v0.5.2/pkg/route/engine.go:390 +0x122
+github.com/cloudwego/hertz/pkg/route.(*Engine).Run(0xc000574000)
+	/home/gopath/pkg/mod/github.com/cloudwego/hertz@v0.5.2/pkg/route/engine.go:357 +0x16a
+github.com/cloudwego/hertz/pkg/app/server.(*Hertz).Spin.func1()
+	/home/gopath/pkg/mod/github.com/cloudwego/hertz@v0.5.2/pkg/app/server/hertz.go:61 +0x29
+created by github.com/cloudwego/hertz/pkg/app/server.(*Hertz).Spin
+	/home/gopath/pkg/mod/github.com/cloudwego/hertz@v0.5.2/pkg/app/server/hertz.go:60 +0xca
+2023/03/14 19:23:44 &minio.Client{endpointURL:(*url.URL)(0xc000344120), credsProvider:(*credentials.Credentials)(0xc0001e2300), overrideSignerType:0, appInfo:struct { appName string; appVersion string }{appName:"", appVersion:""}, secure:false, httpClient:(*http.Client)(0xc0003322d0), bucketLocCache:(*minio.bucketLocationCache)(0xc000088120), isTraceEnabled:false, traceErrorsOnly:false, traceOutput:io.Writer(nil), s3AccelerateEndpoint:"", region:"", random:(*rand.Rand)(0xc000332330), lookup:0, md5Hasher:(func() md5simd.Hasher)(0xc633c0), sha256Hasher:(func() md5simd.Hasher)(0xc63460), healthStatus:-1, trailingHeaderSupport:false}
+2023/03/14 19:23:44 1, We already own videos-and-covers
+2023/03/14 19:23:44.100034 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/static/*filepath         --> handlerName=github.com/cloudwego/hertz/pkg/app.(*fsHandler).handleRequest-fm (num=2 handlers)
+2023/03/14 19:23:44.100069 engine.go:617: [Debug] HERTZ: Method=HEAD   absolutePath=/static/*filepath         --> handlerName=github.com/cloudwego/hertz/pkg/app.(*fsHandler).handleRequest-fm (num=2 handlers)
+2023/03/14 19:23:44.100079 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/feed/             --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Feed (num=2 handlers)
+2023/03/14 19:23:44.100087 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/register/    --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Register (num=2 handlers)
+2023/03/14 19:23:44.100094 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/login/       --> handlerName=github.com/hertz-contrib/jwt.(*HertzJWTMiddleware).LoginHandler-fm (num=2 handlers)
+2023/03/14 19:23:44.100101 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/ping              --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Ping (num=3 handlers)
+2023/03/14 19:23:44.100108 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/publish/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Publish (num=3 handlers)
+2023/03/14 19:23:44.100115 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/publish/list/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.PublishList (num=3 handlers)
+2023/03/14 19:23:44.100121 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/user/             --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.UserInfo (num=3 handlers)
+2023/03/14 19:23:44.100127 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/favorite/action/  --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FavoriteAction (num=3 handlers)
+2023/03/14 19:23:44.100139 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/favorite/list/    --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FavoriteList (num=3 handlers)
+2023/03/14 19:23:44.100145 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/comment/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.CommentAction (num=3 handlers)
+2023/03/14 19:23:44.100151 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/comment/list/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.CommentList (num=3 handlers)
+2023/03/14 19:23:44.100157 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/relation/action/  --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.RelationAction (num=3 handlers)
+2023/03/14 19:23:44.100164 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follow/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FollowList (num=3 handlers)
+2023/03/14 19:23:44.100174 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follower/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FollowerList (num=3 handlers)
+2023/03/14 19:23:44.100183 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/friend/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FriendList (num=3 handlers)
+2023/03/14 19:23:44.100190 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/message/chat/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.MessageChat (num=3 handlers)
+2023/03/14 19:23:44.100196 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/message/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.MessageAction (num=3 handlers)
+2023/03/14 19:23:44.100359 engine.go:389: [Info] HERTZ: Using network library=netpoll
+2023/03/14 19:23:44.100428 transport.go:109: [Info] HERTZ: HTTP server listening on address=[::]:8080
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/user.go:47 [33mSLOW SQL >= 200ms
+[0m[31;1m[701.841ms] [33m[rows:1][35m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1[0m
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/video.go:52 [33mSLOW SQL >= 200ms
+[0m[31;1m[655.225ms] [33m[rows:3][35m SELECT * FROM `video` WHERE unix_timestamp(created_at) <= 1678793137851000 AND `video`.`deleted_at` IS NULL ORDER BY created_at desc LIMIT 20[0m
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:149
+[0m[33m[1.273ms] [34;1m[rows:1][0m SELECT `follower_id` FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:184
+[0m[33m[0.710ms] [34;1m[rows:1][0m SELECT `name` FROM `user` WHERE `user`.`id` = 2 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:199
+[0m[33m[0.580ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+2023/03/14 19:25:39.404651 relation.go:162: [Trace] status=200 method=GET full_path=/douyin/relation/friend/list/ client_ip=112.10.130.23 host=8.130.41.183:8080
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[1.023ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[1.181ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.595ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.558ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.624ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.705ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.782ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 1 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[1.451ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 3 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[106.110ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.421ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.282ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:39 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.268ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 2 AND `comment_video`.`deleted_at` IS NULL
+2023/03/14 19:25:39.912089 feed.go:93: [Trace] status=200 method=GET full_path=/douyin/feed/ client_ip=112.10.130.23 host=8.130.41.183:8080
+2023/03/14 19:25:40.154883 favorite.go:129: [Trace] status=200 method=GET full_path=/douyin/favorite/list/ client_ip=112.10.130.23 host=8.130.41.183:8080
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/video.go:75
+[0m[33m[17.894ms] [34;1m[rows:2][0m SELECT * FROM `video` WHERE owner_id = 2 AND `video`.`deleted_at` IS NULL LIMIT 100
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/video.go:52
+[0m[33m[21.399ms] [34;1m[rows:3][0m SELECT * FROM `video` WHERE unix_timestamp(created_at) <= 1678735831000 AND `video`.`deleted_at` IS NULL ORDER BY created_at desc LIMIT 20
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.870ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[1.236ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.686ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.635ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.310ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.316ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 3 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[2.696ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[2.515ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[1.702ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.696ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.440ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 3 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.790ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[9.942ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[10.666ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.553ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 2 AND `comment_video`.`deleted_at` IS NULL
+2023/03/14 19:25:40.222632 publish.go:114: [Trace] status=200 method=GET full_path=/douyin/publish/list/ client_ip=112.10.130.23 host=8.130.41.183:8080
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.963ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 1 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.315ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.288ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.285ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/14 19:25:40 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.310ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 2 AND `comment_video`.`deleted_at` IS NULL
+2023/03/14 19:25:40.225619 feed.go:93: [Trace] status=200 method=GET full_path=/douyin/feed/ client_ip=112.10.130.23 host=8.130.41.183:8080
+2023/03/14 19:48:39.766667 hertz.go:70: [Error] HERTZ: Receive close signal: error=terminated
+/usr/local/lib/python3.6/site-packages/paramiko/transport.py:32: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography (40.0) will be the last to support Python 3.6.
+  from cryptography.hazmat.backends import default_backend
+Starting easydouyin_mysql_1 ... 
+Starting douyin_redis       ... 
+Starting douyin_minio       ... 
+Starting easydouyin_mysql_1 ... done
+Starting douyin_redis       ... done
+Starting douyin_minio       ... done
+Attaching to easydouyin_mysql_1, douyin_redis, douyin_minio
+[32mmysql_1  |[0m 2023-03-14 13:15:14+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[33mdouyin_redis |[0m 1:C 14 Mar 2023 13:15:14.349 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[33mdouyin_redis |[0m 1:C 14 Mar 2023 13:15:14.349 # Redis version=7.0.9, bits=64, commit=00000000, modified=0, pid=1, just started
+[33mdouyin_redis |[0m 1:C 14 Mar 2023 13:15:14.349 # Configuration loaded
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.349 * monotonic clock: POSIX clock_gettime
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.350 * Running mode=standalone, port=6379.
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.350 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.350 # Server initialized
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.350 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.358 * Loading RDB produced by version 7.0.9
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.358 * RDB age 4875 seconds
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.358 * RDB memory usage when created 1.02 Mb
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.358 * Done loading RDB, keys loaded: 14, keys expired: 0.
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.358 * DB loaded from disk: 0.007 seconds
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:15:14.358 * Ready to accept connections
+[36mdouyin_minio |[0m MinIO Object Storage Server
+[36mdouyin_minio |[0m Copyright: 2015-2023 MinIO, Inc.
+[36mdouyin_minio |[0m License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
+[36mdouyin_minio |[0m Version: RELEASE.2023-03-09T23-16-13Z (go1.19.7 linux/amd64)
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Status:         1 Online, 0 Offline. 
+[36mdouyin_minio |[0m API: http://172.18.0.2:9000  http://127.0.0.1:9000 
+[36mdouyin_minio |[0m Console: http://172.18.0.2:9001 http://127.0.0.1:9001 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Documentation: https://min.io/docs/minio/linux/index.html
+[36mdouyin_minio |[0m Warning: The standard parity is set to 0. This can lead to data loss.
+[32mmysql_1  |[0m 2023-03-14 13:15:15+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-14 13:15:15+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-14T13:15:19.348288Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-14T13:15:19.557495Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-14T13:15:20.167496Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-14T13:15:21.780321Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.275059Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+[32mmysql_1  |[0m 2023-03-14T13:15:22.288545Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.362633Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.362664Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.364734Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.392044Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-14T13:15:22.392093Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:31:08.663 * 100 changes in 300 seconds. Saving...
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:31:08.685 * Background saving started by pid 19
+[33mdouyin_redis |[0m 19:C 14 Mar 2023 13:31:08.788 * DB saved on disk
+[33mdouyin_redis |[0m 19:C 14 Mar 2023 13:31:08.789 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 13:31:08.889 * Background saving terminated with success
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 14:31:09.082 * 1 changes in 3600 seconds. Saving...
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 14:31:09.095 * Background saving started by pid 20
+[33mdouyin_redis |[0m 20:C 14 Mar 2023 14:31:09.274 * DB saved on disk
+[33mdouyin_redis |[0m 20:C 14 Mar 2023 14:31:09.275 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+[33mdouyin_redis |[0m 1:M 14 Mar 2023 14:31:09.295 * Background saving terminated with success
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 04:04:12.777 * 1 changes in 3600 seconds. Saving...
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 04:04:12.857 * Background saving started by pid 21
+[33mdouyin_redis |[0m 21:C 15 Mar 2023 04:04:13.859 * DB saved on disk
+[33mdouyin_redis |[0m 21:C 15 Mar 2023 04:04:13.859 * Fork CoW for RDB: current 1 MB, peak 1 MB, average 0 MB
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 04:04:13.861 * Background saving terminated with success
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 04:09:14.060 * 100 changes in 300 seconds. Saving...
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 04:09:14.072 * Background saving started by pid 22
+[33mdouyin_redis |[0m 22:C 15 Mar 2023 04:09:14.168 * DB saved on disk
+[33mdouyin_redis |[0m 22:C 15 Mar 2023 04:09:14.169 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 04:09:14.172 * Background saving terminated with success
+[33mdouyin_redis |[0m 1:signal-handler (1678856430) Received SIGTERM scheduling shutdown...
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:00:30.603 # User requested shutdown...
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:00:30.603 * Saving the final RDB snapshot before exiting.
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:00:30.621 * DB saved on disk
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:00:30.621 # Redis is now ready to exit, bye bye...
+[33mdouyin_redis exited with code 0
+[0m/usr/local/lib/python3.6/site-packages/paramiko/transport.py:32: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography (40.0) will be the last to support Python 3.6.
+  from cryptography.hazmat.backends import default_backend
+easydouyin_mysql_1 is up-to-date
+douyin_minio is up-to-date
+Creating douyin_redis ... 
+Creating douyin_redis ... done
+Attaching to easydouyin_mysql_1, douyin_minio, douyin_redis
+[36mdouyin_minio |[0m Formatting 1st pool, 1 set(s), 1 drives per set.
+[36mdouyin_minio |[0m WARNING: Host local has more than 0 drives of set. A host failure will result in data becoming unavailable.
+[36mdouyin_minio |[0m MinIO Object Storage Server
+[36mdouyin_minio |[0m Copyright: 2015-2023 MinIO, Inc.
+[36mdouyin_minio |[0m License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
+[36mdouyin_minio |[0m Version: RELEASE.2023-03-09T23-16-13Z (go1.19.7 linux/amd64)
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Status:         1 Online, 0 Offline. 
+[36mdouyin_minio |[0m API: http://172.18.0.4:9000  http://127.0.0.1:9000 
+[36mdouyin_minio |[0m Console: http://172.18.0.4:9001 http://127.0.0.1:9001 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Documentation: https://min.io/docs/minio/linux/index.html
+[36mdouyin_minio |[0m Warning: The standard parity is set to 0. This can lead to data loss.
+[36mdouyin_minio |[0m MinIO Object Storage Server
+[36mdouyin_minio |[0m Copyright: 2015-2023 MinIO, Inc.
+[36mdouyin_minio |[0m License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
+[36mdouyin_minio |[0m Version: RELEASE.2023-03-09T23-16-13Z (go1.19.7 linux/amd64)
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Status:         1 Online, 0 Offline. 
+[36mdouyin_minio |[0m API: http://172.18.0.3:9000  http://127.0.0.1:9000 
+[36mdouyin_minio |[0m Console: http://172.18.0.3:9001 http://127.0.0.1:9001 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Documentation: https://min.io/docs/minio/linux/index.html
+[36mdouyin_minio |[0m Warning: The standard parity is set to 0. This can lead to data loss.
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m  You are running an older version of MinIO released 3 days ago 
+[36mdouyin_minio |[0m  Update: Run `mc admin update` 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Exiting on signal: TERMINATED
+[36mdouyin_minio |[0m MinIO Object Storage Server
+[36mdouyin_minio |[0m Copyright: 2015-2023 MinIO, Inc.
+[36mdouyin_minio |[0m License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
+[36mdouyin_minio |[0m Version: RELEASE.2023-03-09T23-16-13Z (go1.19.7 linux/amd64)
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Status:         1 Online, 0 Offline. 
+[36mdouyin_minio |[0m API: http://172.18.0.4:9000  http://127.0.0.1:9000 
+[36mdouyin_minio |[0m Console: http://172.18.0.4:9001 http://127.0.0.1:9001 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Documentation: https://min.io/docs/minio/linux/index.html
+[36mdouyin_minio |[0m Warning: The standard parity is set to 0. This can lead to data loss.
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m  You are running an older version of MinIO released 3 days ago 
+[36mdouyin_minio |[0m  Update: Run `mc admin update` 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m MinIO Object Storage Server
+[36mdouyin_minio |[0m Copyright: 2015-2023 MinIO, Inc.
+[36mdouyin_minio |[0m License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
+[36mdouyin_minio |[0m Version: RELEASE.2023-03-09T23-16-13Z (go1.19.7 linux/amd64)
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Status:         1 Online, 0 Offline. 
+[36mdouyin_minio |[0m API: http://172.18.0.2:9000  http://127.0.0.1:9000 
+[36mdouyin_minio |[0m Console: http://172.18.0.2:9001 http://127.0.0.1:9001 
+[36mdouyin_minio |[0m 
+[36mdouyin_minio |[0m Documentation: https://min.io/docs/minio/linux/index.html
+[36mdouyin_minio |[0m Warning: The standard parity is set to 0. This can lead to data loss.
+[32mmysql_1  |[0m 2023-03-08 07:14:40+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-08 07:14:40+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-08 07:14:41+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-08 07:14:41+00:00 [Note] [Entrypoint]: Initializing database files
+[32mmysql_1  |[0m 2023-03-08T07:14:41.276470Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-08T07:14:41.276576Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.32) initializing of server in progress as process 79
+[32mmysql_1  |[0m 2023-03-08T07:14:41.289555Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-08T07:14:43.715677Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-08T07:14:45.169317Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+[32mmysql_1  |[0m 2023-03-08 07:14:48+00:00 [Note] [Entrypoint]: Database files initialized
+[32mmysql_1  |[0m 2023-03-08 07:14:48+00:00 [Note] [Entrypoint]: Starting temporary server
+[32mmysql_1  |[0m 2023-03-08T07:14:48.675051Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-08T07:14:48.736029Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 122
+[32mmysql_1  |[0m 2023-03-08T07:14:48.760422Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-08T07:14:49.455094Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-08T07:14:49.769375Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-08T07:14:49.769415Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-08T07:14:49.770932Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-08T07:14:49.788731Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-08T07:14:49.789194Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-08 07:14:49+00:00 [Note] [Entrypoint]: Temporary server started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+[32mmysql_1  |[0m Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+[32mmysql_1  |[0m Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+[32mmysql_1  |[0m Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+[32mmysql_1  |[0m Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+[32mmysql_1  |[0m 2023-03-08 07:14:52+00:00 [Note] [Entrypoint]: GENERATED ROOT PASSWORD: 1tDSke0w3T6GDtT/Xy+RySl3+Fp964Pn
+[32mmysql_1  |[0m 2023-03-08 07:14:52+00:00 [Note] [Entrypoint]: Creating database douyindb
+[32mmysql_1  |[0m 2023-03-08 07:14:52+00:00 [Note] [Entrypoint]: Creating user readygo
+[32mmysql_1  |[0m 2023-03-08 07:14:52+00:00 [Note] [Entrypoint]: Giving user readygo access to schema douyindb
+[32mmysql_1  |[0m 
+[32mmysql_1  |[0m 2023-03-08 07:14:52+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+[32mmysql_1  |[0m ERROR 1824 (HY000) at line 23: Failed to open the referenced table 'video'
+[32mmysql_1  |[0m 2023-03-11 06:43:28+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-11 06:43:29+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-11 06:43:29+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-11T06:43:30.157114Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-11T06:43:30.161430Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-11T06:43:30.491211Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-11T06:43:33.996753Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-11T06:43:34.637316Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+[32mmysql_1  |[0m 2023-03-11T06:43:34.653536Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+[32mmysql_1  |[0m 2023-03-11T06:43:34.834861Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-11T06:43:34.834920Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-11T06:43:34.899617Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-11T06:43:35.008441Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-11T06:43:35.008489Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-12 11:26:18+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-12 11:26:19+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-12 11:26:19+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-12T11:26:40.853718Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-12T11:26:41.947401Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-12T11:26:44.249146Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-12T11:30:18.157722Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-12T11:30:20.152409Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+[32mmysql_1  |[0m 2023-03-12T11:30:20.165624Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+[32mmysql_1  |[0m 2023-03-12T11:30:21.160557Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-12T11:30:21.160614Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-12T11:30:21.248917Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-12T11:30:22.049755Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-12T11:30:22.049817Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-13 13:17:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-13 13:18:00+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-13 13:18:00+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-13T13:18:00.724209Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-13T13:18:00.755593Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-13T13:18:01.653592Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-13T13:18:05.572730Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-13T13:18:06.211157Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+[32mmysql_1  |[0m 2023-03-13T13:18:06.223148Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+[32mmysql_1  |[0m 2023-03-13T13:18:06.370531Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-13T13:18:06.370570Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-13T13:18:06.372770Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-13T13:18:06.399853Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-13T13:18:06.399910Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-14 07:10:58+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-14 07:11:03+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-14 07:11:03+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-14T07:11:08.814910Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-14T07:11:09.100818Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-14T07:11:10.000006Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-14T07:11:12.131614Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-14T07:11:12.826445Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+[32mmysql_1  |[0m 2023-03-14T07:11:12.834967Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+[32mmysql_1  |[0m 2023-03-14T07:11:12.871773Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-14T07:11:12.871803Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-14T07:11:12.873929Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-14T07:11:12.899651Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-14T07:11:12.900107Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-14T07:18:47.417484Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.32).
+[32mmysql_1  |[0m 2023-03-14T07:18:57.922922Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.32)  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-14 07:19:21+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-14 07:19:22+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-14 07:19:22+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-14T07:19:22.782790Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-14T07:19:22.823383Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-14T07:19:23.008066Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-14T07:19:23.745011Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-14T07:19:24.122344Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-14T07:19:24.122381Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-14T07:19:24.124247Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-14T07:19:24.149488Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-14T07:19:24.149544Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[32mmysql_1  |[0m 2023-03-14 13:15:14+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m 2023-03-14 13:15:15+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[32mmysql_1  |[0m 2023-03-14 13:15:15+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.32-1.el8 started.
+[32mmysql_1  |[0m '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+[32mmysql_1  |[0m 2023-03-14T13:15:19.348288Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+[32mmysql_1  |[0m 2023-03-14T13:15:19.557495Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.32) starting as process 1
+[32mmysql_1  |[0m 2023-03-14T13:15:20.167496Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+[32mmysql_1  |[0m 2023-03-14T13:15:21.780321Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.275059Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+[32mmysql_1  |[0m 2023-03-14T13:15:22.288545Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.362633Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.362664Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.364734Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mmysql_1  |[0m 2023-03-14T13:15:22.392044Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+[32mmysql_1  |[0m 2023-03-14T13:15:22.392093Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+[35mdouyin_redis |[0m 1:C 15 Mar 2023 05:04:06.520 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[35mdouyin_redis |[0m 1:C 15 Mar 2023 05:04:06.520 # Redis version=7.0.9, bits=64, commit=00000000, modified=0, pid=1, just started
+[35mdouyin_redis |[0m 1:C 15 Mar 2023 05:04:06.520 # Configuration loaded
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.520 * monotonic clock: POSIX clock_gettime
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 * Running mode=standalone, port=6379.
+[33mdouyin_redis |[0m 1:C 15 Mar 2023 05:04:06.520 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[33mdouyin_redis |[0m 1:C 15 Mar 2023 05:04:06.520 # Redis version=7.0.9, bits=64, commit=00000000, modified=0, pid=1, just started
+[33mdouyin_redis |[0m 1:C 15 Mar 2023 05:04:06.520 # Configuration loaded
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 # Server initialized
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 * Ready to accept connections
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.520 * monotonic clock: POSIX clock_gettime
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 * Running mode=standalone, port=6379.
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 # Server initialized
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:04:06.521 * Ready to accept connections
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:09:07.101 * 100 changes in 300 seconds. Saving...
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:09:07.173 * Background saving started by pid 19
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:09:07.101 * 100 changes in 300 seconds. Saving...
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:09:07.173 * Background saving started by pid 19
+[33mdouyin_redis |[0m 19:C 15 Mar 2023 05:09:07.572 * DB saved on disk
+[35mdouyin_redis |[0m 19:C 15 Mar 2023 05:09:07.572 * DB saved on disk
+[35mdouyin_redis |[0m 19:C 15 Mar 2023 05:09:07.573 * Fork CoW for RDB: current 2 MB, peak 2 MB, average 2 MB
+[33mdouyin_redis |[0m 19:C 15 Mar 2023 05:09:07.573 * Fork CoW for RDB: current 2 MB, peak 2 MB, average 2 MB
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:09:07.578 * Background saving terminated with success
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:09:07.578 * Background saving terminated with success
+2023/03/15 13:17:06 &minio.Client{endpointURL:(*url.URL)(0xc00032cb40), credsProvider:(*credentials.Credentials)(0xc0004833e0), overrideSignerType:0, appInfo:struct { appName string; appVersion string }{appName:"", appVersion:""}, secure:false, httpClient:(*http.Client)(0xc000344090), bucketLocCache:(*minio.bucketLocationCache)(0xc0003460c0), isTraceEnabled:false, traceErrorsOnly:false, traceOutput:io.Writer(nil), s3AccelerateEndpoint:"", region:"", random:(*rand.Rand)(0xc0003440f0), lookup:0, md5Hasher:(func() md5simd.Hasher)(0xc63560), sha256Hasher:(func() md5simd.Hasher)(0xc63600), healthStatus:-1, trailingHeaderSupport:false}
+2023/03/15 13:17:07 1, We already own videos-and-covers
+2023/03/15 13:17:07.482838 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/static/*filepath         --> handlerName=github.com/cloudwego/hertz/pkg/app.(*fsHandler).handleRequest-fm (num=2 handlers)
+2023/03/15 13:17:07.482870 engine.go:617: [Debug] HERTZ: Method=HEAD   absolutePath=/static/*filepath         --> handlerName=github.com/cloudwego/hertz/pkg/app.(*fsHandler).handleRequest-fm (num=2 handlers)
+2023/03/15 13:17:07.482881 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/feed/             --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Feed (num=2 handlers)
+2023/03/15 13:17:07.482889 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/register/    --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Register (num=2 handlers)
+2023/03/15 13:17:07.482896 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/login/       --> handlerName=github.com/hertz-contrib/jwt.(*HertzJWTMiddleware).LoginHandler-fm (num=2 handlers)
+2023/03/15 13:17:07.482903 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/ping              --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Ping (num=3 handlers)
+2023/03/15 13:17:07.482909 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/publish/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.Publish (num=3 handlers)
+2023/03/15 13:17:07.482915 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/publish/list/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.PublishList (num=3 handlers)
+2023/03/15 13:17:07.482922 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/user/             --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.UserInfo (num=3 handlers)
+2023/03/15 13:17:07.482928 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/favorite/action/  --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FavoriteAction (num=3 handlers)
+2023/03/15 13:17:07.482936 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/favorite/list/    --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FavoriteList (num=3 handlers)
+2023/03/15 13:17:07.482945 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/comment/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.CommentAction (num=3 handlers)
+2023/03/15 13:17:07.482954 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/comment/list/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.CommentList (num=3 handlers)
+2023/03/15 13:17:07.482962 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/relation/action/  --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.RelationAction (num=3 handlers)
+2023/03/15 13:17:07.482971 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follow/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FollowList (num=3 handlers)
+2023/03/15 13:17:07.482978 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follower/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FollowerList (num=3 handlers)
+2023/03/15 13:17:07.482987 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/friend/list/ --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.FriendList (num=3 handlers)
+2023/03/15 13:17:07.482995 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/message/chat/     --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.MessageChat (num=3 handlers)
+2023/03/15 13:17:07.483006 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/message/action/   --> handlerName=github.com/qiong-14/EasyDouYin/biz/handler.MessageAction (num=3 handlers)
+2023/03/15 13:17:07.483096 engine.go:389: [Info] HERTZ: Using network library=netpoll
+2023/03/15 13:17:07.483177 transport.go:109: [Info] HERTZ: HTTP server listening on address=[::]:8080
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/video.go:52
+[0m[33m[165.510ms] [34;1m[rows:3][0m SELECT * FROM `video` WHERE unix_timestamp(created_at) <= 1678857447075000 AND `video`.`deleted_at` IS NULL ORDER BY created_at desc LIMIT 20
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/user.go:51 [33mSLOW SQL >= 200ms
+[0m[31;1m[202.677ms] [33m[rows:1][35m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1[0m
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:149
+[0m[33m[4.157ms] [34;1m[rows:1][0m SELECT `follower_id` FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:184
+[0m[33m[0.566ms] [34;1m[rows:1][0m SELECT `name` FROM `user` WHERE `user`.`id` = 2 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:199
+[0m[33m[0.556ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+2023/03/15 13:17:27.485789 relation.go:162: [Trace] status=200 method=GET full_path=/douyin/relation/friend/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[1.102ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[1.611ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.988ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.930ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.754ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[3.310ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.522ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 2 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[1.080ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.748ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.666ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 1 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.581ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.328ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 3 AND `comment_video`.`deleted_at` IS NULL
+2023/03/15 13:17:27.506343 feed.go:96: [Trace] status=200 method=GET full_path=/douyin/feed/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/video.go:75
+[0m[33m[0.911ms] [34;1m[rows:2][0m SELECT * FROM `video` WHERE owner_id = 2 AND `video`.`deleted_at` IS NULL LIMIT 100
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.441ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.432ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.371ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.436ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.623ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.299ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 2 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.979ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.304ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 3 AND `comment_video`.`deleted_at` IS NULL
+2023/03/15 13:17:27.756306 publish.go:114: [Trace] status=200 method=GET full_path=/douyin/publish/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/video.go:52
+[0m[33m[0.525ms] [34;1m[rows:3][0m SELECT * FROM `video` WHERE unix_timestamp(created_at) <= 1678735831000 AND `video`.`deleted_at` IS NULL ORDER BY created_at desc LIMIT 20
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.855ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.879ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.416ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.341ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.981ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[1.376ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 1 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[3.129ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[1.438ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.418ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 2 AND `comment_video`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.636ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.588ms] [34;1m[rows:1][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:17:27 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.717ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 3 AND `comment_video`.`deleted_at` IS NULL
+2023/03/15 13:17:27.793804 feed.go:96: [Trace] status=200 method=GET full_path=/douyin/feed/ client_ip=112.10.130.36 host=8.130.41.183:8080
+2023/03/15 13:17:27.794058 favorite.go:129: [Trace] status=200 method=GET full_path=/douyin/favorite/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:47 [32m/home/EasyDouYin/dal/video.go:75
+[0m[33m[0.940ms] [34;1m[rows:1][0m SELECT * FROM `video` WHERE owner_id = 1 AND `video`.`deleted_at` IS NULL LIMIT 100
+2023/03/15 13:18:47.740742 favorite.go:129: [Trace] status=200 method=GET full_path=/douyin/favorite/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:47 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.414ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:18:47 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.388ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:18:47 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.311ms] [34;1m[rows:0][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:18:47 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.280ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 1 AND `comment_video`.`deleted_at` IS NULL
+2023/03/15 13:18:47.743808 publish.go:114: [Trace] status=200 method=GET full_path=/douyin/publish/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:51 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.756ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:51 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[175.095ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:51.998737 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:53 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.580ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:53 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[2.333ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:53.144565 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:54 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.597ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:54 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.451ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:54.200169 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:55 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.446ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:55 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.350ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:55.257884 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:56 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.472ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:56 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.416ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:56.314540 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:57 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.474ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:57 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.475ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:57.374780 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:58 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.459ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:58 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.531ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:58.432635 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:18:59 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.470ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:18:59 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.457ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:18:59.488795 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:00 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.496ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:00 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.536ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:00.554936 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:01 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.468ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:01 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.382ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:01.610678 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:02 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.434ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:02 [32m/home/EasyDouYin/dal/message.go:44
+[0m[33m[0.385ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE ((to_user_id = 2 AND from_user_id = 1) OR (to_user_id = 1 AND from_user_id = 2)) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:02.668497 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:02 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.520ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:02 [32m/home/EasyDouYin/dal/message.go:30
+[0m[33m[84.583ms] [34;1m[rows:1][0m INSERT INTO `message` (`created_at`,`updated_at`,`deleted_at`,`to_user_id`,`from_user_id`,`content`,`create_time`) VALUES ('2023-03-15 13:19:02.915','2023-03-15 13:19:02.915',NULL,2,1,'哈喽',1678857542913)
+2023/03/15 13:19:02.998485 message.go:50: [Trace] status=200 method=POST full_path=/douyin/message/action/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:03 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.519ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:03 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[1.786ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:03.728708 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:04 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.577ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:04 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.401ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:04.783397 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:05 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.461ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:05 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.487ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:05.838086 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:06 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.454ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:06 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.393ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:06.882521 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:07 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.480ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:07 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.370ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:07.938557 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:08 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.481ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:08 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.354ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:08.997947 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:10 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.476ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:10 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.365ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:10.056206 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:11 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.482ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:11 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.371ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:11.115259 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:12 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.502ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:12 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.457ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:12.183118 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:13 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.500ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:13 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.385ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857542989) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:13.235061 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:13 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.372ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:13 [32m/home/EasyDouYin/dal/message.go:30
+[0m[33m[2.813ms] [34;1m[rows:1][0m INSERT INTO `message` (`created_at`,`updated_at`,`deleted_at`,`to_user_id`,`from_user_id`,`content`,`create_time`) VALUES ('2023-03-15 13:19:13.24','2023-03-15 13:19:13.24',NULL,2,1,'你工作了吗',1678857553239)
+2023/03/15 13:19:13.242483 message.go:50: [Trace] status=200 method=POST full_path=/douyin/message/action/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:14 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.447ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:14 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.442ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857553146) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:14.292551 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:14 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.602ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:14 [32m/home/EasyDouYin/dal/relation.go:149
+[0m[33m[2.162ms] [34;1m[rows:1][0m SELECT `follower_id` FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:19:14 [32m/home/EasyDouYin/dal/relation.go:184
+[0m[33m[0.545ms] [34;1m[rows:1][0m SELECT `name` FROM `user` WHERE `user`.`id` = 2 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:14 [32m/home/EasyDouYin/dal/relation.go:199
+[0m[33m[0.632ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 2 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+2023/03/15 13:19:14.950817 relation.go:162: [Trace] status=200 method=GET full_path=/douyin/relation/friend/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:15 [32m/home/EasyDouYin/dal/user.go:51
+[0m[33m[0.463ms] [34;1m[rows:1][0m SELECT * FROM `user` WHERE id = 1 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2023/03/15 13:19:15 [32m/home/EasyDouYin/dal/message.go:51
+[0m[33m[0.348ms] [34;1m[rows:0][0m SELECT * FROM `message` WHERE (to_user_id = 1 AND from_user_id = 2 AND create_time > 1678857553146) AND `message`.`deleted_at` IS NULL
+2023/03/15 13:19:15.342931 message.go:87: [Trace] status=200 method=GET full_path=/douyin/message/chat/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:16 [32m/home/EasyDouYin/dal/video.go:75
+[0m[33m[1.120ms] [34;1m[rows:1][0m SELECT * FROM `video` WHERE owner_id = 1 AND `video`.`deleted_at` IS NULL LIMIT 100
+2023/03/15 13:19:16.404821 favorite.go:129: [Trace] status=200 method=GET full_path=/douyin/favorite/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+
+2023/03/15 13:19:16 [32m/home/EasyDouYin/dal/relation.go:56
+[0m[33m[0.382ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:19:16 [32m/home/EasyDouYin/dal/relation.go:68
+[0m[33m[0.292ms] [34;1m[rows:1][0m SELECT count(*) FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:19:16 [32m/home/EasyDouYin/dal/relation.go:215
+[0m[33m[0.294ms] [34;1m[rows:0][0m SELECT * FROM `follow` WHERE `follow`.`followed_id` = 1 AND `follow`.`follower_id` = 1 AND `follow`.`cancel` = 1 AND `follow`.`deleted_at` IS NULL
+
+2023/03/15 13:19:16 [32m/home/EasyDouYin/dal/comment.go:86
+[0m[33m[0.242ms] [34;1m[rows:1][0m SELECT count(*) FROM `comment_video` WHERE `comment_video`.`video_id` = 1 AND `comment_video`.`deleted_at` IS NULL
+2023/03/15 13:19:16.412913 publish.go:114: [Trace] status=200 method=GET full_path=/douyin/publish/list/ client_ip=112.10.130.36 host=8.130.41.183:8080
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:19:16.452 * 100 changes in 300 seconds. Saving...
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:19:16.486 * Background saving started by pid 20
+[33mdouyin_redis |[0m 20:C 15 Mar 2023 05:19:16.985 * DB saved on disk
+[33mdouyin_redis |[0m 20:C 15 Mar 2023 05:19:16.986 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+[33mdouyin_redis |[0m 1:M 15 Mar 2023 05:19:16.987 * Background saving terminated with success
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:19:16.452 * 100 changes in 300 seconds. Saving...
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:19:16.486 * Background saving started by pid 20
+[35mdouyin_redis |[0m 20:C 15 Mar 2023 05:19:16.985 * DB saved on disk
+[35mdouyin_redis |[0m 20:C 15 Mar 2023 05:19:16.986 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+[35mdouyin_redis |[0m 1:M 15 Mar 2023 05:19:16.987 * Background saving terminated with success
